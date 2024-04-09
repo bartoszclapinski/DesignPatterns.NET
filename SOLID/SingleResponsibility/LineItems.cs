@@ -1,6 +1,6 @@
 ﻿namespace DesignPatternsNET.SOLID.SingleResponsibility;
 
-public class LineItem
+public class LineItems
 {
     public string Name { get; set; }
     public float Price { get; set; }
