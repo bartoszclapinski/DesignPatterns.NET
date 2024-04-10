@@ -1,6 +1,6 @@
-﻿using DesignPatternsNET.Creational.BuilderExample;
+﻿using DesignPatternsNET.Creational.Builder;
 
-namespace DesignPatternsNET.Creational.BuilderExample;
+namespace DesignPatternsNET.Creational.Builder;
 
 public static class InvoiceApp
 {
