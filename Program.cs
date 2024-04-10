@@ -1,21 +1,49 @@
-﻿
-using DesignPatternsNET.OOP;
+﻿using DesignPatternsNET.OOP;
+using DesignPatternsNET.Creational.BuilderExample;
 
-var choose = 0;
+RunMainMenu();
+return;
 
-while (choose != 9)
+void RunMainMenu()
 {
-    Console.WriteLine("Choose an example:");
-    Console.WriteLine("1. OOP");
-    
-    Console.WriteLine("9. Exit");
-    choose = int.Parse(Console.ReadLine()!);
+    var choose = 0;
 
-    switch (choose)
+    while (choose != 9)
     {
-        case 1:
-            OopExamples.Run();
-            break;
-    }
+        Console.WriteLine("Choose an example:");
+        Console.WriteLine("1. OOP");
+        Console.WriteLine("2. Creational");
+        Console.WriteLine("9. Exit");
+        choose = int.Parse(Console.ReadLine()!);
+    
+        switch (choose)
+        {
+            case 1:
+                OopExamples.Run();
+                break;
+            case 2:
+                RunCreationalMenu();
+                break;
+        }
 
+    }    
+}
+
+void RunCreationalMenu()
+{
+    var creationalChoose = 0;
+    while (creationalChoose != 9)
+    {
+        Console.WriteLine("Choose a creational example:");
+        Console.WriteLine("1. Builder");
+        Console.WriteLine("9. Back");
+        creationalChoose = int.Parse(Console.ReadLine()!);
+        
+        switch (creationalChoose)
+        {
+            case 1:
+                InvoiceApp.Run();
+                break;
+        }
+    }
 }
