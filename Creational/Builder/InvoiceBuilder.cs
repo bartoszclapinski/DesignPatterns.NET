@@ -1,4 +1,4 @@
-﻿namespace DesignPatternsNET.Creational.BuilderExample;
+﻿namespace DesignPatternsNET.Creational.Builder;
 
 public class InvoiceBuilder
 {

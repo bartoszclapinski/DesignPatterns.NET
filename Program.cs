@@ -1,5 +1,6 @@
 ﻿using DesignPatternsNET.OOP;
-using DesignPatternsNET.Creational.BuilderExample;
+using DesignPatternsNET.Creational.Builder;
+using DesignPatternsNET.Creational.Factory;
 
 RunMainMenu();
 return;
@@ -36,6 +37,7 @@ void RunCreationalMenu()
     {
         Console.WriteLine("Choose a creational example:");
         Console.WriteLine("1. Builder");
+        Console.WriteLine("2. Factory");
         Console.WriteLine("9. Back");
         creationalChoose = int.Parse(Console.ReadLine()!);
         
@@ -43,6 +45,9 @@ void RunCreationalMenu()
         {
             case 1:
                 InvoiceApp.Run();
+                break;
+            case 2:
+                FactoryApp.Run();
                 break;
         }
     }
