@@ -1,4 +1,5 @@
-﻿using DesignPatternsNET.OOP;
+﻿using DesignPatternsNET.Behavioral.Strategy;
+using DesignPatternsNET.OOP;
 using DesignPatternsNET.Creational.Builder;
 using DesignPatternsNET.Creational.Factory;
 using DesignPatternsNET.Creational.AbstractFactory;
@@ -17,6 +18,7 @@ void RunMainMenu()
         Console.WriteLine("Choose an example:");
         Console.WriteLine("1. OOP");
         Console.WriteLine("2. Creational");
+        Console.WriteLine("3. Behavioral");
         Console.WriteLine("9. Exit");
         choose = int.Parse(Console.ReadLine()!);
     
@@ -28,9 +30,31 @@ void RunMainMenu()
             case 2:
                 RunCreationalMenu();
                 break;
+            case 3:
+                RunBehavioralMenu();
+                break;
         }
 
     }    
+}
+
+void RunBehavioralMenu()
+{
+    var behavioralChoose = 0;
+    while (behavioralChoose != 9)
+    {
+        Console.WriteLine("Choose a behavioral example:");
+        Console.WriteLine("1. Strategy");
+        Console.WriteLine("9. Back");
+        behavioralChoose = int.Parse(Console.ReadLine()!);
+        
+        switch (behavioralChoose)
+        {
+            case 1:
+                StrategyApp.Run();
+                break;
+        }
+    }
 }
 
 void RunCreationalMenu()
