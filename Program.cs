@@ -3,6 +3,7 @@ using DesignPatternsNET.Creational.Builder;
 using DesignPatternsNET.Creational.Factory;
 using DesignPatternsNET.Creational.AbstractFactory;
 using DesignPatternsNET.Creational.Prototype;
+using DesignPatternsNET.Creational.Singleton;
 
 RunMainMenu();
 return;
@@ -42,6 +43,7 @@ void RunCreationalMenu()
         Console.WriteLine("2. Factory");
         Console.WriteLine("3. Abstract Factory");
         Console.WriteLine("4. Prototype");
+        Console.WriteLine("5. Singleton");
         Console.WriteLine("9. Back");
         creationalChoose = int.Parse(Console.ReadLine()!);
         
@@ -58,6 +60,9 @@ void RunCreationalMenu()
                 break;
             case 4:
                 PrototypeApp.Run();
+                break;
+            case 5:
+                SingletonApp.Run();
                 break;
         }
     }
