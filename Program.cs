@@ -1,4 +1,5 @@
-﻿using DesignPatternsNET.Behavioral.Strategy;
+﻿using DesignPatternsNET.Behavioral.Observer;
+using DesignPatternsNET.Behavioral.Strategy;
 using DesignPatternsNET.OOP;
 using DesignPatternsNET.Creational.Builder;
 using DesignPatternsNET.Creational.Factory;
@@ -45,6 +46,7 @@ void RunBehavioralMenu()
     {
         Console.WriteLine("Choose a behavioral example:");
         Console.WriteLine("1. Strategy");
+        Console.WriteLine("2. Observer");
         Console.WriteLine("9. Back");
         behavioralChoose = int.Parse(Console.ReadLine()!);
         
@@ -52,6 +54,9 @@ void RunBehavioralMenu()
         {
             case 1:
                 StrategyApp.Run();
+                break;
+            case 2:
+                ObserverApp.Run();
                 break;
         }
     }
