@@ -2,6 +2,7 @@
 using DesignPatternsNET.Behavioral.Mediator;
 using DesignPatternsNET.Behavioral.Observer;
 using DesignPatternsNET.Behavioral.Strategy;
+using DesignPatternsNET.Behavioral.TemplateMethod;
 using DesignPatternsNET.OOP;
 using DesignPatternsNET.Creational.Builder;
 using DesignPatternsNET.Creational.Factory;
@@ -51,6 +52,7 @@ void RunBehavioralMenu()
         Console.WriteLine("2. Observer");
         Console.WriteLine("3. Mediator");
         Console.WriteLine("4. Chain of Responsibility");
+        Console.WriteLine("5. Template Method");
         Console.WriteLine("9. Back");
         behavioralChoose = int.Parse(Console.ReadLine()!);
         
@@ -67,6 +69,9 @@ void RunBehavioralMenu()
                 break;
             case 4:
                 ChainOfResponsibilityApp.Run();
+                break;
+            case 5:
+                TemplateMethodApp.Run();
                 break;
         }
     }
