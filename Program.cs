@@ -1,6 +1,7 @@
 ﻿using DesignPatternsNET.Behavioral.ChainOfResponsibility;
 using DesignPatternsNET.Behavioral.Mediator;
 using DesignPatternsNET.Behavioral.Observer;
+using DesignPatternsNET.Behavioral.State;
 using DesignPatternsNET.Behavioral.Strategy;
 using DesignPatternsNET.Behavioral.TemplateMethod;
 using DesignPatternsNET.OOP;
@@ -23,7 +24,7 @@ void RunMainMenu()
         Console.WriteLine("1. OOP");
         Console.WriteLine("2. Creational");
         Console.WriteLine("3. Behavioral");
-        Console.WriteLine("9. Exit");
+        Console.WriteLine("9. EXIT");
         choose = int.Parse(Console.ReadLine()!);
     
         switch (choose)
@@ -53,7 +54,8 @@ void RunBehavioralMenu()
         Console.WriteLine("3. Mediator");
         Console.WriteLine("4. Chain of Responsibility");
         Console.WriteLine("5. Template Method");
-        Console.WriteLine("9. Back");
+        Console.WriteLine("6. State");
+        Console.WriteLine("9. BACK");
         behavioralChoose = int.Parse(Console.ReadLine()!);
         
         switch (behavioralChoose)
@@ -73,6 +75,9 @@ void RunBehavioralMenu()
             case 5:
                 TemplateMethodApp.Run();
                 break;
+            case 6:
+                StateApp.Run();
+                break;
         }
     }
 }
@@ -88,7 +93,7 @@ void RunCreationalMenu()
         Console.WriteLine("3. Abstract Factory");
         Console.WriteLine("4. Prototype");
         Console.WriteLine("5. Singleton");
-        Console.WriteLine("9. Back");
+        Console.WriteLine("9. BACK");
         creationalChoose = int.Parse(Console.ReadLine()!);
         
         switch (creationalChoose)
