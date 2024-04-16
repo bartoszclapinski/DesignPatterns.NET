@@ -10,6 +10,7 @@ using DesignPatternsNET.Creational.Factory;
 using DesignPatternsNET.Creational.AbstractFactory;
 using DesignPatternsNET.Creational.Prototype;
 using DesignPatternsNET.Creational.Singleton;
+using DesignPatternsNET.Structural.Adapter;
 
 RunMainMenu();
 return;
@@ -24,6 +25,7 @@ void RunMainMenu()
         Console.WriteLine("1. OOP");
         Console.WriteLine("2. Creational");
         Console.WriteLine("3. Behavioral");
+        Console.WriteLine("4. Structural");
         Console.WriteLine("9. EXIT");
         choose = int.Parse(Console.ReadLine()!);
     
@@ -38,9 +40,31 @@ void RunMainMenu()
             case 3:
                 RunBehavioralMenu();
                 break;
+            case 4:
+                RunStructuralMenu();
+                break;
         }
 
     }    
+}
+
+void RunStructuralMenu()
+{
+    var structuralChoose = 0;
+    while (structuralChoose != 9)
+    {
+        Console.WriteLine("Choose a structural example:");
+        Console.WriteLine("1. Adapter");
+        Console.WriteLine("9. BACK");
+        structuralChoose = int.Parse(Console.ReadLine()!);
+        
+        switch (structuralChoose)
+        {
+            case 1:
+                AdapterApp.Run();
+                break;
+        }
+    }
 }
 
 void RunBehavioralMenu()
