@@ -13,6 +13,7 @@ using DesignPatternsNET.Creational.Singleton;
 using DesignPatternsNET.Structural.Adapter;
 using DesignPatternsNET.Structural.Decorator;
 using DesignPatternsNET.Structural.Facade;
+using DesignPatternsNET.Structural.Proxy;
 
 RunMainMenu();
 return;
@@ -59,6 +60,7 @@ void RunStructuralMenu()
         Console.WriteLine("1. Adapter");
         Console.WriteLine("2. Facade");
         Console.WriteLine("3. Decorator");
+        Console.WriteLine("4. Proxy");
         Console.WriteLine("9. BACK");
         structuralChoose = int.Parse(Console.ReadLine()!);
         
@@ -72,6 +74,9 @@ void RunStructuralMenu()
                 break;
             case 3:
                 DecoratorApp.Run();
+                break;
+            case 4:
+                ProxyApp.Run();
                 break;
         }
     }
