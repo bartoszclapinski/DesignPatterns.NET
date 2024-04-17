@@ -11,6 +11,7 @@ using DesignPatternsNET.Creational.AbstractFactory;
 using DesignPatternsNET.Creational.Prototype;
 using DesignPatternsNET.Creational.Singleton;
 using DesignPatternsNET.Structural.Adapter;
+using DesignPatternsNET.Structural.Decorator;
 using DesignPatternsNET.Structural.Facade;
 
 RunMainMenu();
@@ -57,6 +58,7 @@ void RunStructuralMenu()
         Console.WriteLine("Choose a structural example:");
         Console.WriteLine("1. Adapter");
         Console.WriteLine("2. Facade");
+        Console.WriteLine("3. Decorator");
         Console.WriteLine("9. BACK");
         structuralChoose = int.Parse(Console.ReadLine()!);
         
@@ -67,6 +69,9 @@ void RunStructuralMenu()
                 break;
             case 2:
                 FacadeApp.Run();
+                break;
+            case 3:
+                DecoratorApp.Run();
                 break;
         }
     }
